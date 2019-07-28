@@ -1,11 +1,18 @@
 class Book {
-  public String name;
-  public int price;
-  public Book(String name, int price){
+  private String name;
+  private int page = 0;
+  public Book(String name){
     this.name = name;
-    this.price = price;
   }
-  public int purchasePrice(int n){
-    return this.price * n;
+  public void setPage(int page){
+    if(page<=100){
+      this.page += page;
+    }
+  }
+  public int getPage(){
+    return this.page;
+  }
+  public String getName(){
+    return this.name;
   }
 }
